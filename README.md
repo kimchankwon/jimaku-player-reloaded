@@ -22,7 +22,7 @@ Based on [Jimaku Player](https://github.com/sheodox/jimaku-player) by sheodox.
    (top-right of the extensions page) instead. Without this, scripts install but never run.
 3. Click the install link for your site above. Tampermonkey opens an install page — click
    **Install** (or **Update** / **Reinstall** if you already have it).
-4. Get an API key at [jimaku.cc/profile](https://jimaku.cc/profile).
+4. Get an API key at [jimaku.cc/account](https://jimaku.cc/account).
 5. Open an episode, press **J** (or hover the player and click the 字 button), go to
    **Settings**, paste the key and **Save**.
 
@@ -121,6 +121,7 @@ node scripts/test-anikoto.js
 ## Changelog
 
 - **Anikoto 3.0.1-anikoto / Crunchyroll 2.7.2** — `@updateURL` / `@downloadURL` added so Tampermonkey
-  auto-updates from this repo; install and update instructions in this README.
+  auto-updates from this repo; install and update instructions in this README; API key
+  links point at jimaku.cc/account.
 - **Anikoto 3.0.0-anikoto** — first Anikoto release (see the section above).
 - **Crunchyroll 2.7.1** — see *What was fixed in 2.7.1*.

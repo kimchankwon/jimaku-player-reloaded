@@ -873,7 +873,7 @@
       return `
 				<div class="stack">
 					<p>Add your jimaku.cc API key in <strong>Settings</strong> to browse and download subtitles.</p>
-					<p class="muted">Get one at <a target="_blank" rel="noopener noreferrer" href="https://jimaku.cc/profile">jimaku.cc/profile</a>.</p>
+					<p class="muted">Get one at <a target="_blank" rel="noopener noreferrer" href="https://jimaku.cc/account">jimaku.cc/account</a>.</p>
 				</div>`;
     }
     const detLine = det.showTitle
@@ -1023,7 +1023,7 @@
 					<input id="jp-apikey" type="password" autocomplete="off" placeholder="Paste your API key" value="${escapeAttr(state.apiKey)}">
 					<button class="btn primary" id="jp-save-key">Save</button>
 				</div>
-				<p class="muted">Get one at <a target="_blank" rel="noopener noreferrer" href="https://jimaku.cc/profile">jimaku.cc/profile</a>. Stored locally only.</p>
+				<p class="muted">Get one at <a target="_blank" rel="noopener noreferrer" href="https://jimaku.cc/account">jimaku.cc/account</a>. Stored locally only.</p>
 
 				<label class="row" style="margin-top:8px"><input type="checkbox" id="jp-prefer-ass" ${state.preferAss ? "checked" : ""}> Prefer ASS files when available</label>
 				<label class="row"><input type="checkbox" id="jp-hide-native" ${state.hideNative ? "checked" : ""}> Hide Crunchyroll's own subtitles</label>

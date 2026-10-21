@@ -759,7 +759,7 @@ html.jp-hide-native :is(${NATIVE_CAPTIONS}){opacity:0!important}
           <input id="jp-key" type="password" autocomplete="off" placeholder="Paste your API key" value="${esc(cfg.apiKey)}">
           <button class="jp-btn primary" data-act="saveKey">Save</button>
         </div>
-        <span class="jp-muted">Free at <a href="https://jimaku.cc/profile" target="_blank" rel="noopener noreferrer">jimaku.cc/profile</a>. Stored by your userscript manager only.</span>
+        <span class="jp-muted">Free at <a href="https://jimaku.cc/account" target="_blank" rel="noopener noreferrer">jimaku.cc/account</a>. Stored by your userscript manager only.</span>
       </div>
       <div class="jp-field"><span class="jp-label">Player's own subtitles</span>
         ${seg("nativeMode", [["below", "Show below"], ["hidden", "Hide"], ["player", "Leave alone"]])}
