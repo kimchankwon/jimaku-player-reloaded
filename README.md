@@ -1,22 +1,52 @@
 # Jimaku Player Reloaded
 
-Tampermonkey userscript that browses, downloads and time-aligns Japanese subtitles from
-[jimaku.cc](https://jimaku.cc) directly inside the Crunchyroll player.
+Tampermonkey userscripts that browse, download and time-align Japanese subtitles from
+[jimaku.cc](https://jimaku.cc) directly inside the Crunchyroll and Anikoto players.
 
 Based on [Jimaku Player](https://github.com/sheodox/jimaku-player) by sheodox.
 
 ## Install
 
-1. Install **Tampermonkey** (Chrome/Edge/Firefox).
-2. Open the Tampermonkey dashboard → **Utilities** → **Import from file**, and pick
-   `jimaku-player-reloaded.user.js`. (Or: **+** to create a new script, select all, paste
-   the file contents, Ctrl+S.)
-3. Confirm the script is **enabled** and, in Tampermonkey's settings, that
-   **Config mode** is at least *Beginner* — `GM_xmlhttpRequest` must be granted for
-   `jimaku.cc` or nothing can be downloaded.
-4. Get an API key at [jimaku.cc/profile](https://jimaku.cc/profile).
-5. Open any Crunchyroll episode, press **J** (or hover the player and click the 字 button),
-   go to **Settings**, paste the key, **Save**.
+| Site | Install link |
+| --- | --- |
+| Anikoto | [jimaku-anikoto.user.js](https://raw.githubusercontent.com/kimchankwon/jimaku-player-reloaded/main/jimaku-anikoto.user.js) |
+| Crunchyroll | [jimaku-player-reloaded.user.js](https://raw.githubusercontent.com/kimchankwon/jimaku-player-reloaded/main/jimaku-player-reloaded.user.js) |
+
+1. Install the **Tampermonkey** extension
+   ([Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo),
+   [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd),
+   [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/)).
+2. **Chrome / Edge only:** let Tampermonkey run userscripts. Open `chrome://extensions`
+   (`edge://extensions`), click **Details** on Tampermonkey and turn on **Allow User Scripts**.
+   On browsers older than Chrome 138 there is no such toggle — turn on **Developer mode**
+   (top-right of the extensions page) instead. Without this, scripts install but never run.
+3. Click the install link for your site above. Tampermonkey opens an install page — click
+   **Install** (or **Update** / **Reinstall** if you already have it).
+4. Get an API key at [jimaku.cc/account](https://jimaku.cc/account).
+5. Open an episode, press **J** (or hover the player and click the 字 button), go to
+   **Settings**, paste the key and **Save**.
+
+If Tampermonkey asks whether the script may connect to `jimaku.cc`, choose **Always allow** —
+that's how it searches and downloads subtitles.
+
+## Auto-update
+
+Both scripts carry `@updateURL` / `@downloadURL` pointing at this repo, so Tampermonkey keeps
+them current on its own:
+
+- It checks **once a day** by default. To change that: Tampermonkey **Dashboard → Settings**,
+  set *Config mode* to **Advanced**, then *Script Update → Check Interval*.
+- To update right now: click the Tampermonkey toolbar icon → **Check for userscript updates**.
+- Make sure updates aren't switched off for the script: **Dashboard →** click the script →
+  **Settings** tab → *Check for updates* is ticked.
+
+**Installed it before by pasting or importing the file?** That copy may not know where to
+update from. Click the install link above once; Tampermonkey replaces the old copy (same name
+and namespace) and your saved API key and settings carry over.
+
+**Publishing an update:** Tampermonkey only installs an update when the `@version` in the
+header goes up, so bump it in every change to a `.user.js` file. GitHub's raw files can take
+a few minutes to refresh after a push.
 
 ## Use
 
@@ -66,7 +96,7 @@ Based on [Jimaku Player](https://github.com/sheodox/jimaku-player) by sheodox.
 node scripts/test.js
 ```
 
-## Anikoto version (`jimaku-anikoto.user.js`, 3.0.0)
+## Anikoto version (`jimaku-anikoto.user.js`, 3.0.1-anikoto)
 
 Same idea for Anikoto's JW Player / Plyr embeds. Differences from the Crunchyroll script:
 
@@ -87,3 +117,11 @@ Same idea for Anikoto's JW Player / Plyr embeds. Differences from the Crunchyrol
 ```bash
 node scripts/test-anikoto.js
 ```
+
+## Changelog
+
+- **Anikoto 3.0.1-anikoto / Crunchyroll 2.7.2** — `@updateURL` / `@downloadURL` added so Tampermonkey
+  auto-updates from this repo; install and update instructions in this README; API key
+  links point at jimaku.cc/account.
+- **Anikoto 3.0.0-anikoto** — first Anikoto release (see the section above).
+- **Crunchyroll 2.7.1** — see *What was fixed in 2.7.1*.
