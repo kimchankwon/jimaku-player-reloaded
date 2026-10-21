@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Jimaku Player Reloaded (Anikoto)
 // @namespace    https://github.com/mgp25/jimaku-player-reloaded
-// @version      3.0.0-anikoto
+// @version      3.0.1-anikoto
 // @description  Browse, download, and align Japanese subtitles on Anikoto using jimaku.cc (rikaikun-friendly)
 // @author       mgp25 (adapted for Anikoto)
 // @match        *://anikoto.tv/*
@@ -31,6 +31,9 @@
 // @grant        GM_setValue
 // @connect      jimaku.cc
 // @run-at       document-start
+// @homepageURL  https://github.com/kimchankwon/jimaku-player-reloaded
+// @updateURL    https://raw.githubusercontent.com/kimchankwon/jimaku-player-reloaded/main/jimaku-anikoto.user.js
+// @downloadURL  https://raw.githubusercontent.com/kimchankwon/jimaku-player-reloaded/main/jimaku-anikoto.user.js
 // ==/UserScript==
 //
 // Based on the original Jimaku Player by sheodox + Jimaku Player Reloaded by mgp25

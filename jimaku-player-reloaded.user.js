@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Jimaku Player Reloaded
 // @namespace    https://github.com/mgp25/jimaku-player-reloaded
-// @version      2.7.1
+// @version      2.7.2
 // @description  Browse, download, and align Japanese subtitles directly inside the Crunchyroll player using jimaku.cc.
 // @author       mgp25
 // @match        https://*.crunchyroll.com/*
@@ -10,6 +10,9 @@
 // @connect      jimaku.cc
 // @connect      *.jimaku.cc
 // @run-at       document-start
+// @homepageURL  https://github.com/kimchankwon/jimaku-player-reloaded
+// @updateURL    https://raw.githubusercontent.com/kimchankwon/jimaku-player-reloaded/main/jimaku-player-reloaded.user.js
+// @downloadURL  https://raw.githubusercontent.com/kimchankwon/jimaku-player-reloaded/main/jimaku-player-reloaded.user.js
 // @noframes     false
 // ==/UserScript==
 //
