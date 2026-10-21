@@ -96,7 +96,7 @@ a few minutes to refresh after a push.
 node scripts/test.js
 ```
 
-## Anikoto version (`jimaku-anikoto.user.js`, 3.0.1)
+## Anikoto version (`jimaku-anikoto.user.js`, 3.0.1-anikoto)
 
 Same idea for Anikoto's JW Player / Plyr embeds. Differences from the Crunchyroll script:
 
@@ -120,7 +120,7 @@ node scripts/test-anikoto.js
 
 ## Changelog
 
-- **Anikoto 3.0.1 / Crunchyroll 2.7.2** — `@updateURL` / `@downloadURL` added so Tampermonkey
+- **Anikoto 3.0.1-anikoto / Crunchyroll 2.7.2** — `@updateURL` / `@downloadURL` added so Tampermonkey
   auto-updates from this repo; install and update instructions in this README.
-- **Anikoto 3.0.0** — first Anikoto release (see the section above).
+- **Anikoto 3.0.0-anikoto** — first Anikoto release (see the section above).
 - **Crunchyroll 2.7.1** — see *What was fixed in 2.7.1*.
